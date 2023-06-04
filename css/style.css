@@ -1,0 +1,33 @@
+header {
+
+color:black;
+background-color: beige;
+text-align:center;
+font-weight: bold;
+
+}
+
+h2{
+  text-align: center;
+  margin: 20px;
+  font-weight: bold ;
+  background-color: beige;
+}
+
+.greeting {
+margin-top: 20px;
+font-weight: bold;
+}
+
+p {
+margin: 20px;
+text-align: center;
+background-color: beige;
+font-weight: bold;
+}
+
+footer{
+  text-align: center;
+  background-color: beige;
+  font-weight: bold;
+}
