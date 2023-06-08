@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 
 let username = prompt('What is your name?');
 // console.log('username');
