@@ -74,7 +74,7 @@ for(let i = 0; i < 4; i++){
     alert('too low');
   }
   else if (number > 5){
-    alert('lower');
+    alert('too high');
   }
   if(i === 4){
     alert('out of guesses');
