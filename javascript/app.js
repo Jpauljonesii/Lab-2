@@ -63,6 +63,24 @@ case 'no':
 
 }
 
+
+for(let i = 0; i < 4; i++){
+  let number = prompt('Guess a number between 1 and 10');
+  if (number === '5'){
+    alert('correct');
+    break;
+  }
+  if(number < 5){
+    alert('too low');
+  }
+  else if (number > 5){
+    alert('lower');
+  }
+  if(i === 4){
+    alert('out of guesses');
+  }
+}
+
 let greeting = document.querySelector ('.greeting');
 greeting.textContent= `Hi ${username} welcome to my page`;
 
