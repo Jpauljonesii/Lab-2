@@ -81,6 +81,14 @@ for(let i = 0; i < 4; i++){
   }
 }
 
+let answer = prompt('What are John\'s favorite places to eat in Chicago?');
+
+let johnFavFood = ['Giordanos', 'Harolds', 'Majanis', 'Babas'];
+
+for (let i = 0; i < johnFavFood.length; i++) {
+  console.log(eliasFavFood[i]);
+}
+
 let greeting = document.querySelector ('.greeting');
 greeting.textContent= `Hi ${username} welcome to my page`;
 
