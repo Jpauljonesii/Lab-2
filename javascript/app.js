@@ -70,13 +70,14 @@ for(let i = 0; i < 4; i++){
     alert('correct');
     break;
   }
+  console.log(i);
   if(number < 5){
     alert('too low');
   }
   else if (number > 5){
     alert('too high');
   }
-  if(i === 4){
+  if(i === 3){
     alert('out of guesses');
   }
 }
@@ -85,8 +86,15 @@ let answer = prompt('What are John\'s favorite places to eat in Chicago?');
 
 let johnFavFood = ['Giordanos', 'Harolds', 'Majanis', 'Babas'];
 
-for (let i = 0; i < johnFavFood.length; i++) {
-  console.log(eliasFavFood[i]);
+for (let i = 0; i < 6; i++) {
+  console.log(johnFavFood[i]);
+  if (johnFavFood === ['Giordanos','Harolds','Majanis', 'Babas']){
+    alert('correct');
+  }
+  if(johnFavFood !== ['Giordanos', 'Harolds','Majanis', 'Babas']){
+    alert('wrong answer');
+  }
+
 }
 
 let greeting = document.querySelector ('.greeting');
