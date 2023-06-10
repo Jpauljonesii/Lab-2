@@ -1,5 +1,5 @@
 'use strict';
-
+let score = 0;
 let username = prompt('What is your name?');
 // console.log('username');
 
@@ -11,6 +11,7 @@ switch (food.toLowerCase()){
 case 'yes':
   // console.log('food');
   alert ('great choice');
+  score++;
   break;
 case 'no':
   // console.log('food');
@@ -23,6 +24,7 @@ switch (travel.toLowerCase()){
 case 'yes':
   // console.log('travel');
   alert ('traveling is great');
+  score++;
   break;
 case 'no':
   // console.log('travel');
@@ -34,6 +36,7 @@ switch (sports.toLowerCase()){
 case 'yes':
   // console.log('sports');
   alert ('sports are exciting');
+  score++;
   break;
 case 'no':
   // console.log('sports');
@@ -45,6 +48,7 @@ switch (kids.toLowerCase()){
 case 'yes':
   // console.log('kids');
   alert ('kids are a blessing');
+  score++;
   break;
 case 'no':
   // console.log('kids');
@@ -56,6 +60,7 @@ switch (read.toLowerCase()){
 case 'yes':
   // console.log('read');
   alert ('reading helps you grow');
+  score++;
   break;
 case 'no':
   // console.log('read');
@@ -68,6 +73,7 @@ for(let i = 0; i < 4; i++){
   let number = prompt('Guess a number between 1 and 10');
   if (number === '5'){
     alert('correct');
+    score++;
     break;
   }
   console.log(i);
@@ -82,20 +88,19 @@ for(let i = 0; i < 4; i++){
   }
 }
 
-let answer = prompt('What are John\'s favorite places to eat in Chicago?');
-
 let johnFavFood = ['Giordanos', 'Harolds', 'Majanis', 'Babas'];
-
-for (let i = 0; i < 6; i++) {
-  console.log(johnFavFood[i]);
-  if (johnFavFood === ['Giordanos','Harolds','Majanis', 'Babas']){
-    alert('correct');
+for(let i = 0; i < 6; i++){
+  let answer = prompt('What are my favorite Chicago restaurants?').toLowerCase();
+  if (answer === johnFavFood[0] || answer === johnFavFood[1] || answer === johnFavFood[2] || answer === johnFavFood[3]){
+    alert(answer = 'is correct');
+    score++;
   }
-  if(johnFavFood !== ['Giordanos', 'Harolds','Majanis', 'Babas']){
-    alert('wrong answer');
-  }
-
 }
+
+alert('The' + 'correct' + 'answers' + 'are' + 'Giordanos','Harolds', 'Majanis', 'Babas');
+alert('you scored' + score);
+
+
 
 let greeting = document.querySelector ('.greeting');
 greeting.textContent= `Hi ${username} welcome to my page`;
