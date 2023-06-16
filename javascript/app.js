@@ -1,71 +1,75 @@
 'use strict';
 let score = 0;
 let username = prompt('What is your name?');
-// console.log('username');
 
 let hometown = prompt('What is your hometown?');
-// console.log('hometown');
 
-let food = prompt('Is your favorite food pizza?');
-switch (food.toLowerCase()){
-case 'yes':
-  // console.log('food');
-  alert ('great choice');
-  score++;
-  break;
-case 'no':
-  // console.log('food');
-  alert ('that sucks');
+function guessingGame(){
+  let food = prompt('Is your favorite food pizza?');
+  switch (food.toLowerCase()){
+  case 'yes':
+    alert ('great choice');
+    score++;
+    break;
+  case 'no':
+    alert ('that sucks');
+    break;
+  default:
+    alert('Please answer yes or no');
+  }
 
-}
+  let travel = prompt('Do you like to travel?');
+  switch (travel.toLowerCase()){
+  case 'yes':
+    alert ('traveling is great');
+    score++;
+    break;
+  case 'no':
+    alert ('you are missing out');
+    break;
+  default:
+    alert('Do you not like to travel?');
+  }
 
-let travel = prompt('Do you like to travel?');
-switch (travel.toLowerCase()){
-case 'yes':
-  // console.log('travel');
-  alert ('traveling is great');
-  score++;
-  break;
-case 'no':
-  // console.log('travel');
-  alert ('you are missing out');
-}
+  let sports = prompt('Do you like watching sports?');
+  switch (sports.toLowerCase()){
+  case 'yes':
+    alert ('sports are exciting');
+    score++;
+    break;
+  case 'no':
+    alert ('you are missing out');
+    break;
+  default:
+    alert('Please answer question with yes or no');
+  }
 
-let sports = prompt('Do you like watching sports?');
-switch (sports.toLowerCase()){
-case 'yes':
-  // console.log('sports');
-  alert ('sports are exciting');
-  score++;
-  break;
-case 'no':
-  // console.log('sports');
-  alert ('you are missing out');
-}
+  let kids = prompt('Do you have any kids');
+  switch (kids.toLowerCase()){
+  case 'yes':
+    alert ('kids are a blessing');
+    score++;
+    break;
+  case 'no':
+    alert ('you have it made lol');
+    break;
+  default:
+    alert('I really need you to answer the question with yes or no');
+  }
 
-let kids = prompt('Do you have any kids');
-switch (kids.toLowerCase()){
-case 'yes':
-  // console.log('kids');
-  alert ('kids are a blessing');
-  score++;
-  break;
-case 'no':
-  // console.log('kids');
-  alert ('you have it made lol');
-}
+  let read = prompt ('Do you like to read');
+  switch (read.toLowerCase()){
+  case 'yes':
+    alert ('reading helps you grow');
+    score++;
+    break;
+  case 'no':
+    alert ('you cant grow if you dont read');
+    break;
+  default:
+    alert('you didnt answer my question');
 
-let read = prompt ('Do you like to read');
-switch (read.toLowerCase()){
-case 'yes':
-  // console.log('read');
-  alert ('reading helps you grow');
-  score++;
-  break;
-case 'no':
-  // console.log('read');
-  alert ('you cant grow if you dont read');
-
+  }
 }
 
 
@@ -89,19 +93,22 @@ for(let i = 0; i < 4; i++){
 }
 
 let johnFavFood = ['Giordanos', 'Harolds', 'Majanis', 'Babas'];
+let answersLeft = 0;
+console.log(answersLeft);
 for(let i = 0; i < 6; i++){
-  let answer = prompt('What are my favorite Chicago restaurants?').toLowerCase();
-  if (answer === johnFavFood[0] || answer === johnFavFood[1] || answer === johnFavFood[2] || answer === johnFavFood[3]){
-    alert(answer = 'is correct');
+  let answer = prompt(`What are my favorite Chicago restaurants? There are ${johnFavFood.length - answersLeft} correct answers left. You have ${6 - i} chances left`).toLowerCase();
+  if (johnFavFood.includes(answer)){
+    alert(`${answer} is correct`);
+    answersLeft++;
     score++;
   }
 }
-
-alert('The' + 'correct' + 'answers' + 'are' + 'Giordanos','Harolds', 'Majanis', 'Babas');
-alert('you scored' + score);
-
+alert('The correct answers are Giordanos, Harolds, Majanis, Babas');
+alert('you scored ' + score);
 
 
+let quizButton = document.getElementById('quizBtn');
+quizButton.addEventListener('click', guessingGame);
 let greeting = document.querySelector ('.greeting');
 greeting.textContent= `Hi ${username} welcome to my page`;
 
