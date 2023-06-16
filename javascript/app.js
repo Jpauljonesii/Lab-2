@@ -94,7 +94,6 @@ for(let i = 0; i < 4; i++){
 
 let johnFavFood = ['Giordanos', 'Harolds', 'Majanis', 'Babas'];
 let answersLeft = 0;
-console.log(answersLeft);
 for(let i = 0; i < 6; i++){
   let answer = prompt(`What are my favorite Chicago restaurants? There are ${johnFavFood.length - answersLeft} correct answers left. You have ${6 - i} chances left`).toLowerCase();
   if (johnFavFood.includes(answer)){
